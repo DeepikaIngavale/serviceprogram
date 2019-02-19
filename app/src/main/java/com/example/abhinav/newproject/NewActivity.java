@@ -1,6 +1,7 @@
 package com.example.abhinav.newproject;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -49,7 +50,8 @@ public class NewActivity extends AppCompatActivity
         }
         if(item.getItemId()==R.id.menu_display)
         {
-
+            Intent intent=new Intent(this,ResultActivity.class);
+            startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }
