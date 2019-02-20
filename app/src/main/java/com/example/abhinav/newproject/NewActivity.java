@@ -92,6 +92,7 @@ public class NewActivity extends AppCompatActivity
                         String subExpence_head = object.getString("SubExpence_Head");
                         String approved = object.getString("Approved");
                         String bill_photo = object.getString("Bill_Photo");
+                        String rate = object.getString("Rate");
 
 
                         ResultBean resultBean = new ResultBean();
@@ -102,6 +103,7 @@ public class NewActivity extends AppCompatActivity
                         resultBean.setSubexprate(subExpence_head);
                         resultBean.setApproved(approved);
                         resultBean.setBillphoto(bill_photo);
+                        resultBean.setRate(rate);
 
                         arrayList.add(resultBean);
                     }

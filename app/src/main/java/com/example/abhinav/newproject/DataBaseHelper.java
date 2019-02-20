@@ -28,6 +28,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     private static final String subexpheadrate = "subexpheadrate";
     private static final String approved = "approved";
     private static final String billphoto = "billphoto";
+    private static final String rate = "rate";
 
     public DataBaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -44,6 +45,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                         + exphead + " text,"
                         + subexpheadrate + " text,"
                         + approved + " text,"
+                        + rate + " text,"
                         + billphoto + " text);";
 
         sqLiteDatabase.execSQL(create_result_details);
@@ -78,6 +80,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             contentValues.put(subexpheadrate,arrayList.get(i).getSubexprate());
             contentValues.put(approved,arrayList.get(i).getApproved());
             contentValues.put(billphoto,arrayList.get(i).getBillphoto());
+            contentValues.put(rate,arrayList.get(i).getRate());
 
             //if (l>0)
             {
@@ -109,6 +112,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 resultBean.setSubexprate(cursor.getString(cursor.getColumnIndex(subexpheadrate)));
                 resultBean.setApproved(cursor.getString(cursor.getColumnIndex(approved)));
                 resultBean.setBillphoto(cursor.getString(cursor.getColumnIndex(billphoto)));
+                resultBean.setBillphoto(cursor.getString(cursor.getColumnIndex(rate)));
                 arrayList.add(resultBean);
 
             }while (cursor.moveToNext());

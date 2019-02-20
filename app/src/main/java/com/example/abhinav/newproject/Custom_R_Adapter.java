@@ -37,13 +37,13 @@ public class Custom_R_Adapter extends RecyclerView.Adapter<Custom_R_Adapter.MyVi
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position)
     {
 
-        holder.txtv_date.setText(""+arrayList.get(position));
-        holder.txtv_paidamt.setText(""+arrayList.get(position));
-        holder.txtv_billno.setText(""+arrayList.get(position));
-        holder.txtv_expencehead.setText(""+arrayList.get(position));
-        holder.txtv_subexpencehead.setText(""+arrayList.get(position));
-        holder.txtv_rate.setText(""+arrayList.get(position));
-        holder.txtv_approved.setText(""+arrayList.get(position));
+        holder.txtv_date.setText(""+arrayList.get(position).getDate());
+        holder.txtv_paidamt.setText(""+arrayList.get(position).getPaidamt());
+        holder.txtv_billno.setText(""+arrayList.get(position).getBillno());
+        holder.txtv_expencehead.setText(""+arrayList.get(position).getExphead());
+        holder.txtv_subexpencehead.setText(""+arrayList.get(position).getSubexprate());
+        holder.txtv_rate.setText(""+arrayList.get(position).getRate());
+        holder.txtv_approved.setText(""+arrayList.get(position).getApproved());
         // implement setOnClickListener event on item view.
         holder.itemView.setOnClickListener(new View.OnClickListener()
         {

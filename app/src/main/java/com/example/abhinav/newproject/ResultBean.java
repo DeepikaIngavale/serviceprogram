@@ -10,6 +10,16 @@ public class ResultBean
     private String approved;
     private String billphoto;
 
+    public String getRate() {
+        return rate;
+    }
+
+    public void setRate(String rate) {
+        this.rate = rate;
+    }
+
+    private String rate;
+
     public String getDate() {
         return date;
     }

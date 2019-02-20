@@ -21,8 +21,11 @@ public class Main_R2Activity extends AppCompatActivity
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
-        StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
-        recyclerView.setLayoutManager(staggeredGridLayoutManager);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(linearLayoutManager);
+
+        /*StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(staggeredGridLayoutManager);*/
 
         customAdapter =new Custom_R_Adapter(Main_R2Activity.this,arrayList);
         recyclerView.setAdapter(customAdapter);
