@@ -50,8 +50,8 @@ public class Main_RActivity extends AppCompatActivity
         }
         if(item.getItemId()==R.id.menu_display)
         {
-            /*Intent intent=new Intent(this,ResultActivity.class);
-            startActivity(intent);*/
+            Intent intent=new Intent(this,Main_R2Activity.class);
+            startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }
