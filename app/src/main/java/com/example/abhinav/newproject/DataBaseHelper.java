@@ -13,8 +13,8 @@ import java.util.ArrayList;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "test_service.db";
-    public static final int DATABASE_VERSION = 1;
+    public static final String DATABASE_NAME = "test_service2.db";
+    public static final int DATABASE_VERSION = 2;
 
     Context context;
     SQLiteDatabase db;
@@ -104,17 +104,23 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 cursor.moveToFirst();
             }
             do {
-                ResultBean resultBean=new ResultBean();
-                resultBean.setDate(cursor.getString(cursor.getColumnIndex(date)));
-                resultBean.setPaidamt(cursor.getString(cursor.getColumnIndex(paidamt)));
-                resultBean.setBillno(cursor.getString(cursor.getColumnIndex(billno)));
-                resultBean.setExphead(cursor.getString(cursor.getColumnIndex(exphead)));
-                resultBean.setSubexprate(cursor.getString(cursor.getColumnIndex(subexpheadrate)));
-                resultBean.setApproved(cursor.getString(cursor.getColumnIndex(approved)));
-                resultBean.setBillphoto(cursor.getString(cursor.getColumnIndex(billphoto)));
-                resultBean.setBillphoto(cursor.getString(cursor.getColumnIndex(rate)));
-                arrayList.add(resultBean);
-
+                try
+                {
+                    ResultBean resultBean=new ResultBean();
+                    resultBean.setDate(cursor.getString(cursor.getColumnIndex(date)));
+                    resultBean.setPaidamt(cursor.getString(cursor.getColumnIndex(paidamt)));
+                    resultBean.setBillno(cursor.getString(cursor.getColumnIndex(billno)));
+                    resultBean.setExphead(cursor.getString(cursor.getColumnIndex(exphead)));
+                    resultBean.setSubexprate(cursor.getString(cursor.getColumnIndex(subexpheadrate)));
+                    resultBean.setApproved(cursor.getString(cursor.getColumnIndex(approved)));
+                    resultBean.setBillphoto(cursor.getString(cursor.getColumnIndex(billphoto)));
+                    resultBean.setBillphoto(cursor.getString(cursor.getColumnIndex(rate)));
+                    arrayList.add(resultBean);
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
             }while (cursor.moveToNext());
         }
         db.close();
