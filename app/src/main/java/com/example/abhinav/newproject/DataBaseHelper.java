@@ -79,8 +79,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             contentValues.put(exphead,arrayList.get(i).getExphead());
             contentValues.put(subexpheadrate,arrayList.get(i).getSubexprate());
             contentValues.put(approved,arrayList.get(i).getApproved());
-            contentValues.put(billphoto,arrayList.get(i).getBillphoto());
             contentValues.put(rate,arrayList.get(i).getRate());
+            contentValues.put(billphoto,arrayList.get(i).getBillphoto());
+
 
             //if (l>0)
             {
@@ -104,23 +105,25 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 cursor.moveToFirst();
             }
             do {
-                try
-                {
-                    ResultBean resultBean=new ResultBean();
-                    resultBean.setDate(cursor.getString(cursor.getColumnIndex(date)));
-                    resultBean.setPaidamt(cursor.getString(cursor.getColumnIndex(paidamt)));
-                    resultBean.setBillno(cursor.getString(cursor.getColumnIndex(billno)));
-                    resultBean.setExphead(cursor.getString(cursor.getColumnIndex(exphead)));
-                    resultBean.setSubexprate(cursor.getString(cursor.getColumnIndex(subexpheadrate)));
-                    resultBean.setApproved(cursor.getString(cursor.getColumnIndex(approved)));
-                    resultBean.setBillphoto(cursor.getString(cursor.getColumnIndex(billphoto)));
-                    resultBean.setBillphoto(cursor.getString(cursor.getColumnIndex(rate)));
-                    arrayList.add(resultBean);
-                }
-                catch (Exception e)
-                {
-                    e.printStackTrace();
-                }
+                    try
+                    {
+                        ResultBean resultBean=new ResultBean();
+                        resultBean.setDate(cursor.getString(cursor.getColumnIndex(date)));
+                        resultBean.setPaidamt(cursor.getString(cursor.getColumnIndex(paidamt)));
+                        resultBean.setBillno(cursor.getString(cursor.getColumnIndex(billno)));
+                        resultBean.setExphead(cursor.getString(cursor.getColumnIndex(exphead)));
+                        resultBean.setSubexprate(cursor.getString(cursor.getColumnIndex(subexpheadrate)));
+                        resultBean.setApproved(cursor.getString(cursor.getColumnIndex(approved)));
+                        resultBean.setRate(cursor.getString(cursor.getColumnIndex(rate)));
+                        resultBean.setBillphoto(cursor.getString(cursor.getColumnIndex(billphoto)));
+
+                        arrayList.add(resultBean);
+
+                    }
+                    catch (Exception e)
+                    {
+                        e.printStackTrace();
+                    }
             }while (cursor.moveToNext());
         }
         db.close();

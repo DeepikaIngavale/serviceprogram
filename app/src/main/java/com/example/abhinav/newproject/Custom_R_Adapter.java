@@ -1,8 +1,11 @@
 package com.example.abhinav.newproject;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,13 +40,14 @@ public class Custom_R_Adapter extends RecyclerView.Adapter<Custom_R_Adapter.MyVi
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position)
     {
 
-        holder.txtv_date.setText(""+arrayList.get(position).getDate());
-        holder.txtv_paidamt.setText(""+arrayList.get(position).getPaidamt());
-        holder.txtv_billno.setText(""+arrayList.get(position).getBillno());
-        holder.txtv_expencehead.setText(""+arrayList.get(position).getExphead());
-        holder.txtv_subexpencehead.setText(""+arrayList.get(position).getSubexprate());
-        holder.txtv_rate.setText(""+arrayList.get(position).getRate());
-        holder.txtv_approved.setText(""+arrayList.get(position).getApproved());
+        holder.txtv_date.setText(arrayList.get(position).getDate());
+        holder.txtv_paidamt.setText(arrayList.get(position).getPaidamt());
+        holder.txtv_billno.setText(arrayList.get(position).getBillno());
+        holder.txtv_expencehead.setText(arrayList.get(position).getExphead());
+        holder.txtv_subexpencehead.setText(arrayList.get(position).getSubexprate());
+        holder.txtv_rate.setText(arrayList.get(position).getRate());
+        holder.txtv_approved.setText(arrayList.get(position).getApproved());
+
         // implement setOnClickListener event on item view.
         holder.itemView.setOnClickListener(new View.OnClickListener()
         {
@@ -56,6 +60,17 @@ public class Custom_R_Adapter extends RecyclerView.Adapter<Custom_R_Adapter.MyVi
             }
         });
     }
+    public static Bitmap StringToBitMap(String encodedString){
+        try {
+            byte [] encodeByte= Base64.decode(encodedString,Base64.DEFAULT);
+            Bitmap bitmap= BitmapFactory.decodeByteArray(encodeByte, 0, encodeByte.length);
+            return bitmap;
+        } catch(Exception e)
+        {
+            e.getMessage();
+            return null;
+        }
+    }
 
     @Override
     public int getItemCount()
@@ -65,6 +80,7 @@ public class Custom_R_Adapter extends RecyclerView.Adapter<Custom_R_Adapter.MyVi
     public class MyViewHolder extends RecyclerView.ViewHolder
     {
         TextView txtv_date,txtv_paidamt,txtv_billno,txtv_expencehead,txtv_subexpencehead,txtv_rate,txtv_approved;
+        ImageView imgv_download;
         public MyViewHolder(View itemView)
         {
             super(itemView);
@@ -76,6 +92,7 @@ public class Custom_R_Adapter extends RecyclerView.Adapter<Custom_R_Adapter.MyVi
             txtv_subexpencehead = (TextView) itemView.findViewById(R.id.txtv_subexpencehead);
             txtv_rate = (TextView) itemView.findViewById(R.id.txtv_rate);
             txtv_approved = (TextView) itemView.findViewById(R.id.txtv_approved);
+            imgv_download=(ImageView)itemView.findViewById(R.id.imgv_download);
         }
     }
 }

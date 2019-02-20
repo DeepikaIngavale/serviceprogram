@@ -12,6 +12,8 @@ public class Main_R2Activity extends AppCompatActivity
 {
     ArrayList<ResultBean> arrayList;
     Custom_R_Adapter customAdapter;
+    DataBaseHelper db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -19,15 +21,21 @@ public class Main_R2Activity extends AppCompatActivity
         setContentView(R.layout.activity_main__r2);
         arrayList = new ArrayList<>();
 
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        db = new DataBaseHelper(Main_R2Activity.this);
+        arrayList=db.getResultDetails();
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(linearLayoutManager);
+        if(arrayList.size()>0)
+        {
+            RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+
+            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
+            recyclerView.setLayoutManager(linearLayoutManager);
 
         /*StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(staggeredGridLayoutManager);*/
 
-        customAdapter =new Custom_R_Adapter(Main_R2Activity.this,arrayList);
-        recyclerView.setAdapter(customAdapter);
+            customAdapter =new Custom_R_Adapter(Main_R2Activity.this,arrayList);
+            recyclerView.setAdapter(customAdapter);
+        }
     }
 }

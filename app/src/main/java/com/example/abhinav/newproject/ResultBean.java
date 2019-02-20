@@ -8,6 +8,7 @@ public class ResultBean
     private String exphead;
     private String subexprate;
     private String approved;
+    private String rate;
     private String billphoto;
 
     public String getRate() {
@@ -18,7 +19,7 @@ public class ResultBean
         this.rate = rate;
     }
 
-    private String rate;
+
 
     public String getDate() {
         return date;
