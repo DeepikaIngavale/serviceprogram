@@ -16,9 +16,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_recyclerview"
+        android:text="LISTVIEW"
+        android:layout_margin="10dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_recyclerviewdemo"
         android:text="RECYCLERVIEW"
         android:layout_margin="10dp"
         />
-
 </LinearLayout>
 </android.support.constraint.ConstraintLayout>

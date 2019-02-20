@@ -8,13 +8,15 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btn_recyclerview;
+    Button btn_recyclerview,btn_recyclerviewdemo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btn_recyclerview=(Button)findViewById(R.id.btn_recyclerview);
+        btn_recyclerviewdemo=(Button)findViewById(R.id.btn_recyclerviewdemo);
         btn_recyclerview.setOnClickListener(this);
+        btn_recyclerviewdemo.setOnClickListener(this);
     }
 
     @Override
@@ -25,6 +27,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(this, NewActivity.class);
             startActivity(intent);
         }
+        if(view.getId()==R.id.btn_recyclerviewdemo)
+        {
+            Intent intent = new Intent(this, Main_RActivity.class);
+            startActivity(intent);
+        }
     }
-
 }
