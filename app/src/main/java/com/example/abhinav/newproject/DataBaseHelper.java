@@ -83,14 +83,32 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             contentValues.put(billphoto,arrayList.get(i).getBillphoto());
 
 
-            //if (l>0)
+            if (checkRegisterData(arrayList.get(i).getDate()))
             {
-                l = db.insert(TABLE_REULT_DETAILS, null, contentValues);
+                l = db.update(TABLE_REULT_DETAILS,contentValues,"date=? ",new String[]{arrayList.get(i).getDate()});
+            }else
+            {
+                l= db.insert(TABLE_REULT_DETAILS,null,contentValues);
             }
         }
         db.close();
         return l;
     }
+
+    public boolean checkRegisterData(String date)
+    {
+        boolean status = false;
+        Cursor cursor = db.query(TABLE_REULT_DETAILS,null,"date=?",new String[]{date},null,null,null);
+        if (cursor!=null)
+        {
+            if (cursor.getCount()>0)
+            {
+                status = true;
+            }
+        }
+        return status;
+    }
+
     public ArrayList<ResultBean>getResultDetails()
     {
         open();
