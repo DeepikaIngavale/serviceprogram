@@ -3,6 +3,7 @@ package com.example.abhinav.newproject;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Base64;
@@ -10,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,7 +41,14 @@ public class Custom_R_Adapter extends RecyclerView.Adapter<Custom_R_Adapter.MyVi
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position)
     {
-
+        if(position%2==0)
+        {
+            holder.layout_parent.setBackgroundColor(Color.GRAY);
+        }
+        else
+        {
+            holder.layout_parent.setBackgroundColor(Color.WHITE);
+        }
         holder.txtv_date.setText(arrayList.get(position).getDate());
         holder.txtv_paidamt.setText(arrayList.get(position).getPaidamt());
         holder.txtv_billno.setText(arrayList.get(position).getBillno());
@@ -47,7 +56,14 @@ public class Custom_R_Adapter extends RecyclerView.Adapter<Custom_R_Adapter.MyVi
         holder.txtv_subexpencehead.setText(arrayList.get(position).getSubexprate());
         holder.txtv_rate.setText(arrayList.get(position).getRate());
         holder.txtv_approved.setText(arrayList.get(position).getApproved());
-
+        if(arrayList.get(position).getApproved().equals("0"))
+        {
+            holder.txtv_approved.setText("pendding");
+        }
+        else
+        {
+            holder.txtv_approved.setText("approved");
+        }
         Bitmap image = StringToBitMap(arrayList.get(position).getBillphoto());
 
         holder.imgv_download.setImageBitmap(image);
@@ -86,10 +102,12 @@ public class Custom_R_Adapter extends RecyclerView.Adapter<Custom_R_Adapter.MyVi
     {
         TextView txtv_date,txtv_paidamt,txtv_billno,txtv_expencehead,txtv_subexpencehead,txtv_rate,txtv_approved;
         ImageView imgv_download;
+        LinearLayout layout_parent;
         public MyViewHolder(View itemView)
         {
             super(itemView);
             // get the reference of item view's
+            layout_parent=(LinearLayout)itemView.findViewById(R.id.layout_parent);
             txtv_date = (TextView) itemView.findViewById(R.id.txtv_date);
             txtv_paidamt = (TextView) itemView.findViewById(R.id.txtv_paidamt);
             txtv_billno = (TextView) itemView.findViewById(R.id.txtv_billno);
