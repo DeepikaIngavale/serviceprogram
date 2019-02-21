@@ -48,6 +48,10 @@ public class Custom_R_Adapter extends RecyclerView.Adapter<Custom_R_Adapter.MyVi
         holder.txtv_rate.setText(arrayList.get(position).getRate());
         holder.txtv_approved.setText(arrayList.get(position).getApproved());
 
+        Bitmap image = StringToBitMap(arrayList.get(position).getBillphoto());
+
+        holder.imgv_download.setImageBitmap(image);
+
         // implement setOnClickListener event on item view.
         holder.itemView.setOnClickListener(new View.OnClickListener()
         {
@@ -60,7 +64,8 @@ public class Custom_R_Adapter extends RecyclerView.Adapter<Custom_R_Adapter.MyVi
             }
         });
     }
-    public static Bitmap StringToBitMap(String encodedString){
+    public static Bitmap StringToBitMap(String encodedString)
+    {
         try {
             byte [] encodeByte= Base64.decode(encodedString,Base64.DEFAULT);
             Bitmap bitmap= BitmapFactory.decodeByteArray(encodeByte, 0, encodeByte.length);
