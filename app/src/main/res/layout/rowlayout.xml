@@ -14,22 +14,26 @@
             android:id="@+id/txtv_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:layout_weight="1"/>
         <TextView
             android:id="@+id/txtv_paidamt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             />
         <TextView
             android:text="Rs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             />
         <TextView
             android:id="@+id/txtv_billno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="right"/>
+            android:gravity="right"
+            android:textStyle="bold"/>
     </LinearLayout>
 
     <LinearLayout
@@ -42,10 +46,12 @@
             android:id="@+id/txtv_expencehead"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:layout_weight="1"/>
 
         <TextView
             android:text="("
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
@@ -54,32 +60,35 @@
             android:id="@+id/txtv_subexpencehead"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:layout_weight="1"/>
         <TextView
             android:text="Rs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             />
         <TextView
             android:id="@+id/txtv_rate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            />
+            android:textStyle="bold"/>
         <TextView
             android:text="/-"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            />
+            android:textStyle="bold"/>
         <TextView
             android:text=")"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            />
+            android:textStyle="bold"/>
         <TextView
             android:id="@+id/txtv_approved"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:gravity="right"/>
     </LinearLayout>
     <ImageView
