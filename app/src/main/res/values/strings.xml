@@ -2,4 +2,14 @@
     <string name="app_name">NewProject</string>
     <string name="Dispaly">display</string>
     <string name="Download">download</string>
+
+    <string name="u_login">Enter User Name</string>
+    <string name="u_pass">Enter Password</string>
+    <string name="u_signin">SIGNIN</string>
+    <string name="u_fpass">FORGET PASSWORD</string>
+    <string name="u_savecnt">DATABASE</string>
+    <string name="u_save">SAVE</string>
+    <string name="u_true">USERNAME VALID</string>
+    <string name="u_true_pass">PASSWORD VALID</string>
+    <string name="showlist">Show List</string>
 </resources>

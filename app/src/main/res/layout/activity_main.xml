@@ -23,6 +23,14 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/btn_sharedPref"
+        android:text="Shared Preference"
+        android:textAllCaps="false"
+        android:layout_margin="10dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/btn_recyclerview"
         android:text="List View"
         android:textAllCaps="false"
