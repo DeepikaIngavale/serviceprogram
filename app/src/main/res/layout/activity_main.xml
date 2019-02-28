@@ -15,15 +15,25 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/btn_lifecycle"
+        android:text="Activity Life Cycle"
+        android:textAllCaps="false"
+        android:layout_margin="10dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/btn_recyclerview"
-        android:text="LISTVIEW"
+        android:text="List View"
+        android:textAllCaps="false"
         android:layout_margin="10dp"
         />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_recyclerviewdemo"
-        android:text="RECYCLERVIEW"
+        android:text="Recycler View"
+        android:textAllCaps="false"
         android:layout_margin="10dp"
         />
 </LinearLayout>

@@ -23,7 +23,8 @@
         <activity android:name=".NewActivity" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".Main_RActivity" />
-        <activity android:name=".Main_R2Activity"></activity>
+        <activity android:name=".Main_R2Activity" />
+        <activity android:name=".LifeCycleDemo"></activity>
     </application>
 
 </manifest>
