@@ -26,7 +26,8 @@
         <activity android:name=".Main_R2Activity" />
         <activity android:name=".LifeCycleDemo" />
         <activity android:name=".SharedPrefActivity" />
-        <activity android:name=".SharedPref"></activity>
+        <activity android:name=".SharedPref" />
+        <activity android:name=".ListViewActivity"></activity>
     </application>
 
 </manifest>

@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btn_recyclerview,btn_recyclerviewdemo,btn_lifecycle,btn_sharedPref;
+    Button btn_recyclerview,btn_recyclerviewdemo,btn_lifecycle,btn_sharedPref,btn_lv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,11 +18,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_recyclerviewdemo=(Button)findViewById(R.id.btn_recyclerviewdemo);
         btn_lifecycle=(Button)findViewById(R.id.btn_lifecycle);
         btn_sharedPref=(Button)findViewById(R.id.btn_sharedPref);
+        btn_lv=(Button)findViewById(R.id.btn_lv);
 
         btn_recyclerview.setOnClickListener(this);
         btn_recyclerviewdemo.setOnClickListener(this);
         btn_lifecycle.setOnClickListener(this);
         btn_sharedPref.setOnClickListener(this);
+        btn_lv.setOnClickListener(this);
     }
 
     @Override
@@ -46,6 +48,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(view.getId()==R.id.btn_sharedPref)
         {
             Intent intent = new Intent(this, SharedPrefActivity.class);
+            startActivity(intent);
+        }
+        if(view.getId()==R.id.btn_lv)
+        {
+            Intent intent = new Intent(this, ListViewActivity.class);
             startActivity(intent);
         }
     }
