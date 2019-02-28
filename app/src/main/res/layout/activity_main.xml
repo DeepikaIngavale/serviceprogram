@@ -40,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_recyclerview"
-        android:text="List View"
+        android:text="List View Using WebService"
         android:textAllCaps="false"
         android:layout_margin="10dp"
         />

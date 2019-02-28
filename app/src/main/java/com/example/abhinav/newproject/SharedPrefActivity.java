@@ -31,13 +31,11 @@ public class SharedPrefActivity extends AppCompatActivity implements View.OnClic
         btn_signin=(Button) findViewById(R.id.btn_signin);
         btn_fpass=(Button) findViewById(R.id.btn_fpass);
         btn_savecnt=(Button) findViewById(R.id.btn_savecnt);
-        btn_list = (Button) findViewById(R.id.btn_list);
 
         SAVEPREF = getSharedPreferences(MY_PYERF, Context.MODE_PRIVATE);
 
         btn_savecnt.setOnClickListener(this);
         btn_signin.setOnClickListener(this);
-        btn_list.setOnClickListener(this);
     }
 
     @Override
