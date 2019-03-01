@@ -28,7 +28,8 @@
         <activity android:name=".SharedPrefActivity" />
         <activity android:name=".SharedPref" />
         <activity android:name=".ListViewActivity" />
-        <activity android:name=".DBActivity"></activity>
+        <activity android:name=".DBActivity" />
+        <activity android:name=".ListViewCutmAct"></activity>
     </application>
 
 </manifest>

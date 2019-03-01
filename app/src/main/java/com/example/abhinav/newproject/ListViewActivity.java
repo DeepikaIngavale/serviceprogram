@@ -2,6 +2,7 @@ package com.example.abhinav.newproject;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class ListViewActivity extends AppCompatActivity
@@ -19,7 +20,10 @@ public class ListViewActivity extends AppCompatActivity
 
         listv_names = (ListView) findViewById(R.id.listv_names);
 
-        CustomeAdapter customeAdapter = new CustomeAdapter(ListViewActivity.this,country_names,country_flags);
-        listv_names.setAdapter(customeAdapter);
+        ArrayAdapter adapter = new ArrayAdapter(ListViewActivity.this, android.R.layout.simple_list_item_1, country_names);
+        listv_names.setAdapter(adapter);
+
+        /*CustomeAdapter customeAdapter = new CustomeAdapter(ListViewActivity.this,country_names,country_flags);
+        listv_names.setAdapter(customeAdapter);*/
     }
 }
