@@ -7,7 +7,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/c_bg"
         android:divider="@color/c_divider"
         >
         <TextView
@@ -25,7 +24,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/c_divider"
+                android:textColor="@color/c_bg"
                 android:text="CLASS :-"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
             <TextView
@@ -47,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:text="AGE :-"
                 android:layout_weight="1"
-                android:textColor="@color/c_divider"
+                android:textColor="@color/c_bg"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
             <TextView
                 android:id="@+id/txtv_age"
@@ -61,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:text="YEARS"
                 android:layout_weight="1"
-                android:textColor="@color/c_divider"
+                android:textColor="@color/c_bg"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
         </LinearLayout>
     </LinearLayout>
