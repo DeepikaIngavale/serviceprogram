@@ -6,67 +6,78 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    >
-    <Button
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_lifecycle"
-        android:text="Activity Life Cycle"
-        android:textAllCaps="false"
-        android:layout_margin="10dp"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_sharedPref"
-        android:text="Shared Preference"
-        android:textAllCaps="false"
-        android:layout_margin="10dp"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_lv"
-        android:text="List View(ArrayAdapter)"
-        android:textAllCaps="false"
-        android:layout_margin="10dp"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_lv1"
-        android:text="List View(CustomAdapter)"
-        android:textAllCaps="false"
-        android:layout_margin="10dp"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_db"
-        android:text="Data Base"
-        android:textAllCaps="false"
-        android:layout_margin="10dp"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_recyclerview"
-        android:text="List View Using WebService"
-        android:textAllCaps="false"
-        android:layout_margin="10dp"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_recyclerviewdemo"
-        android:text="Recycler View"
-        android:textAllCaps="false"
-        android:layout_margin="10dp"
-        />
-</LinearLayout>
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_lifecycle"
+                android:text="Activity Life Cycle"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/c_divider"
+                android:textAllCaps="false"
+                android:layout_margin="10dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_sharedPref"
+                android:text="Shared Preference"
+                android:textAllCaps="false"
+                android:layout_margin="10dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_lv"
+                android:text="List View(ArrayAdapter)"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/c_divider"
+                android:textAllCaps="false"
+                android:layout_margin="10dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_lv1"
+                android:text="List View(CustomAdapter)"
+                android:textAllCaps="false"
+                android:layout_margin="10dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_db"
+                android:text="Data Base"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/c_divider"
+                android:textAllCaps="false"
+                android:layout_margin="10dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_recyclerview"
+                android:text="List View Using WebService"
+                android:textAllCaps="false"
+                android:layout_margin="10dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_recyclerviewdemo"
+                android:text="Recycler View"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/c_divider"
+                android:textAllCaps="false"
+                android:layout_margin="10dp"
+                />
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
