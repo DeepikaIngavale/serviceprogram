@@ -39,6 +39,14 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/btn_db"
+        android:text="Data Base"
+        android:textAllCaps="false"
+        android:layout_margin="10dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/btn_recyclerview"
         android:text="List View Using WebService"
         android:textAllCaps="false"

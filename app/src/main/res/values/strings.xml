@@ -12,4 +12,6 @@
     <string name="u_true">USERNAME VALID</string>
     <string name="u_true_pass">PASSWORD VALID</string>
     <string name="showlist">Show List</string>
+    <string name="check">CHECK</string>
+    <string name="save">SAVE</string>
 </resources>

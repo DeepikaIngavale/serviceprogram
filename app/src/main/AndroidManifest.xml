@@ -27,7 +27,8 @@
         <activity android:name=".LifeCycleDemo" />
         <activity android:name=".SharedPrefActivity" />
         <activity android:name=".SharedPref" />
-        <activity android:name=".ListViewActivity"></activity>
+        <activity android:name=".ListViewActivity" />
+        <activity android:name=".DBActivity"></activity>
     </application>
 
 </manifest>
