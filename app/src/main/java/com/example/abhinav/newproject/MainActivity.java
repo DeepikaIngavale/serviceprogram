@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(this, ListViewActivity.class);
             startActivity(intent);
         }
-        if(view.getId()==R.id.btn_lv)
+        if(view.getId()==R.id.btn_db)
         {
             Intent intent = new Intent(this, DBActivity.class);
             startActivity(intent);

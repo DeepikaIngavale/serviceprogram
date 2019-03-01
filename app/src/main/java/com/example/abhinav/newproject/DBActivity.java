@@ -19,6 +19,20 @@ public class DBActivity extends AppCompatActivity implements View.OnClickListene
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_db);
+
+        db = new DataBaseHelperAct(DBActivity.this);
+
+        etxt_fname = (EditText) findViewById(R.id.etxt_fname);
+        etxt_lname = (EditText) findViewById(R.id.etxt_lname);
+        etxt_mono = (EditText) findViewById(R.id.etxt_mono);
+        etxt_age = (EditText) findViewById(R.id.etxt_age);
+        etxt_bdate = (EditText) findViewById(R.id.etxt_bdate);
+        etxt_email = (EditText) findViewById(R.id.etxt_email);
+
+        btn_save = (Button) findViewById(R.id.btn_save);
+        btn_save.setOnClickListener(this);
+
+        db.getAllStudentDetails();
     }
     @Override
     public void onClick(View view)
