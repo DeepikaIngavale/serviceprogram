@@ -9,7 +9,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btn_recyclerview,btn_recyclerviewdemo,btn_lifecycle,btn_sharedPref,btn_lv,
-            btn_db,btn_lv1;
+            btn_db,btn_lv1,btn_optionsmenu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_lv=(Button)findViewById(R.id.btn_lv);
         btn_db=(Button)findViewById(R.id.btn_db);
         btn_lv1=(Button)findViewById(R.id.btn_lv1);
+        btn_optionsmenu=(Button)findViewById(R.id.btn_optionsmenu);
 
         btn_recyclerview.setOnClickListener(this);
         btn_recyclerviewdemo.setOnClickListener(this);
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_lv.setOnClickListener(this);
         btn_db.setOnClickListener(this);
         btn_lv1.setOnClickListener(this);
+        btn_optionsmenu.setOnClickListener(this);
     }
 
     @Override
@@ -66,6 +68,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         }
         if(view.getId()==R.id.btn_lv1)
+        {
+            Intent intent = new Intent(this, ListViewCutmAct.class);
+            startActivity(intent);
+        }
+        if(view.getId()==R.id.btn_optionsmenu)
         {
             Intent intent = new Intent(this, ListViewCutmAct.class);
             startActivity(intent);

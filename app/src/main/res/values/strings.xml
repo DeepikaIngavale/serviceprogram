@@ -14,4 +14,18 @@
     <string name="showlist">Show List</string>
     <string name="check">CHECK</string>
     <string name="save">SAVE</string>
+    <string name="title">EMPLOYEE DETAILS FORM</string>
+    <string name="name">Name Of Employee</string>
+    <string name="company">Company Name</string>
+    <string name="age">Age</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="birthdate">DateOfBirth</string>
+    <string name="dob">Enter B\'date</string>
+    <string name="salary">Enter Your Salary</string>
+    <string name="save1">SAVE DETAILS</string>
+    <string name="show_details">Show List</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
 </resources>

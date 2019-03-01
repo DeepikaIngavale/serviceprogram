@@ -29,7 +29,8 @@
         <activity android:name=".SharedPref" />
         <activity android:name=".ListViewActivity" />
         <activity android:name=".DBActivity" />
-        <activity android:name=".ListViewCutmAct"></activity>
+        <activity android:name=".ListViewCutmAct" />
+        <activity android:name=".OptionsMenuAct"></activity>
     </application>
 
 </manifest>

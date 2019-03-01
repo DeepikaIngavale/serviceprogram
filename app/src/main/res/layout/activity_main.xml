@@ -63,6 +63,24 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/btn_spinner"
+                android:text="DB And Spinner"
+                android:textAllCaps="false"
+                android:layout_margin="10dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_optionsmenu"
+                android:text="DB And Options Menu"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/c_divider"
+                android:textAllCaps="false"
+                android:layout_margin="10dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/btn_recyclerview"
                 android:text="List View Using WebService"
                 android:textAllCaps="false"
@@ -73,8 +91,6 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_recyclerviewdemo"
                 android:text="Recycler View"
-                android:background="@color/colorPrimary"
-                android:textColor="@color/c_divider"
                 android:textAllCaps="false"
                 android:layout_margin="10dp"
                 />
