@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if(view.getId()==R.id.btn_optionsmenu)
         {
-            Intent intent = new Intent(this, ListViewCutmAct.class);
+            Intent intent = new Intent(this, OptionsMenuAct.class);
             startActivity(intent);
         }
     }
